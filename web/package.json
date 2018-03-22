@@ -1,16 +1,35 @@
 {
-  "name": "web",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "name": "web",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "bootstrap": "^4.0.0",
+      "chart.js": "^2.7.2",
+      "flag-icon-css": "^3.0.0",
+      "font-awesome": "^4.7.0",
+      "history": "^4.7.2",
+      "node-sass-chokidar": "0.0.3",
+      "npm-run-all": "^4.1.2",
+      "react": "^16.2.0",
+      "react-chartjs-2": "^2.7.0",
+      "react-dom": "^16.2.0",
+      "react-router-dom": "^4.2.2",
+      "react-scripts": "1.1.1",
+      "react-svg": "^2.2.14",
+      "react-transition-group": "^2.2.1",
+      "reactstrap": "^5.0.0-beta",
+      "simple-line-icons": "^2.4.1"
+    },
+    "scripts": {
+      "start": "npm-run-all -p watch-css start-js",
+      "build": "npm-run-all build-css build-js",
+      "start-js": "react-scripts start",
+      "build-js": "react-scripts build",
+      "build-css": "node-sass-chokidar src/ -o src/",
+      "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+      "test": "react-scripts test --env=jsdom",
+      "eject": "react-scripts eject"
+    },
+    "devDependencies": {}
   }
-}
+  
