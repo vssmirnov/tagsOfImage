@@ -7,7 +7,8 @@ import Breadcrumb from '../../components/Breadcrumb/';
 import Aside from '../../components/Aside/';
 import Footer from '../../components/Footer/';
 
-import Dashboard from '../../views/Dashboard/';
+import DropzoneDashboard from '../../views/Dashboard/Dropzone';
+import ImageDashboard from '../../views/Dashboard/Image';
 
 class Full extends Component {
     render() {
@@ -19,8 +20,9 @@ class Full extends Component {
                     <main className="main">
                         <Container fluid>
                             <Switch>
-                                <Route path="/dashboard" name="Dashboard" component={Dashboard} />
-                                <Redirect from="/" to="/dashboard" />
+                                <Route path="/dropzone" name="DropzoneDashboard" component={DropzoneDashboard} />
+                                <Route path="/image" name="ImageDashboard" component={ImageDashboard} />
+                                <Redirect from="/" to="/dropzone" />
                             </Switch>
                         </Container>
                     </main>

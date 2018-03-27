@@ -1,5 +1,6 @@
 const routes = {
     '/': 'Home',
-    '/dashboard': 'Dashboard'
+    '/dropzone': 'DropzoneDashboard',
+    '/image': 'ImageDashboard'
 };
 export default routes;

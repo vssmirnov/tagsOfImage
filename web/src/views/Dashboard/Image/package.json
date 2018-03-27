@@ -1,0 +1,6 @@
+{
+    "name": "ImageDashboard",
+    "version": "0.0.0",
+    "private": true,
+    "main": "./Image.js"
+}
